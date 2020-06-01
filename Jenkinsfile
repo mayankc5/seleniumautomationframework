@@ -4,14 +4,14 @@ pipeline{
 	
 		stage('Build'){
 		  steps{
-		    mvn compile
+		  
 		    echo "Build sucessfull"
 		  }
 		}
 	
 		stage('Test'){
 		steps{
-			mvn test
+		
 		    echo "Test sucessfull"
 		  }
 		}

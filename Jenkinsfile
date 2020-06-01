@@ -17,7 +17,7 @@ pipeline{
 		}
 		stage('Deployment'){
 		steps{
-		mvn package
+		
 		    echo "Deployment sucessfull"
 		  }
 		}

@@ -11,9 +11,21 @@ pipeline{
 		   }
 		}
 		
+		stage('compile'){
+			steps{
+				bat label: '', script: 'mvn compile'
+				}
+			
+		}
+		stage('verify'){
+			steps{
+				bat label: '', script: 'mvn verify'
+				}
+			
+		}
 		stage('test'){
 			steps{
-				bat label: '', script: 'mvn test'
+				bat label: '', script: 'mvn clean install'
 				}
 			
 		}

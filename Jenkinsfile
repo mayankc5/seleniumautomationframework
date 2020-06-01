@@ -7,15 +7,17 @@ pipeline{
 		     
 		   }
 		}
+		stage('compile'){
+		  steps{
+		      bat label: '', script: 'set path=C:\\Program Files\\Java\\apache-maven-3.6.3\\bin'
+		     
+		   }
+		}
 		stage('test'){
 			steps{
-				step{
-					bat label: '', script: 'set path=C:\\Program Files\\Java\\apache-maven-3.6.3\\bin'
+				bat label: '', script: 'mvn clean install'
 				}
-				step{
-					bat label: '', script: 'mvn clean install'
-				}
-			}
+			
 		}
 	}
 }

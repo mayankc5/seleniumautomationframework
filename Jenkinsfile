@@ -1,10 +1,9 @@
 pipeline{
    agent any
 	stages{
-		stage('Build'){
+		stage('checkout'){
 		  steps{
-		       // maven('Maven')
-			echo "mvn clean install"
+		      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mayankc5/seleniumautomationframework.git']]])
 		     
 		   }
 		}

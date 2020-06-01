@@ -4,8 +4,10 @@ pipeline{
 	
 		stage('Build'){
 		  steps{
+			  step{
 		   mvn clean install
 		    echo "Build sucessfull"
+			  }
 		  }
 		}
 	

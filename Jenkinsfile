@@ -17,17 +17,12 @@ pipeline{
 				}
 			
 		}
-		stage('verify'){
-			steps{
-				bat label: '', script: 'mvn verify'
-				}
-			
-		}
 		stage('test'){
 			steps{
-				bat label: '', script: 'mvn clean install'
+				bat label: '', script: 'mvn test'
 				}
 			
 		}
+		
 	}
 }

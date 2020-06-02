@@ -5,4 +5,50 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>my project</name>
   <description>test</description>
+  <dependencies>
+<dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>1.0.2</version>
+      <scope>test</scope>
+  </dependency>
+<dependency>
+     <groupId>info.cukes</groupId>
+     <artifactId>cucumber-junit</artifactId>
+     <version>1.0.2</version>
+     <scope>test</scope>
+</dependency>
+<dependency>
+     <groupId>junit</groupId>
+     <artifactId>junit</artifactId>
+     <version>4.10</version>
+     <scope>test</scope>
+</dependency>
+</dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <!-- put your configurations here -->
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+  
 </project>

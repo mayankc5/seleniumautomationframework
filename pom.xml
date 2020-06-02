@@ -5,6 +5,11 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>my project</name>
   <description>test</description>
+  <properties>
+ <maven.compiler.source>1.7</maven.compiler.source>
+  <maven.compiler.target>1.7</maven.compiler.target>
+</properties>
+ 
   <dependencies>
 <dependency>
       <groupId>info.cukes</groupId>
@@ -31,8 +36,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+          
           <version>3.8.1</version>
           <configuration>
             <!-- put your configurations here -->
